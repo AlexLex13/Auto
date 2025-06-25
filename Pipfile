@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 django = "*"
-django-debug-toolbar = "*"
 djangorestframework = "*"
 markdown = "*"
 django-filter = "*"
@@ -14,10 +13,15 @@ psycopg = "*"
 redis = {extras = ["hiredis"], version = "*"}
 gunicorn = "*"
 django-environ = "*"
-pytest = "*"
-pytest-django = "*"
+django-countries = {extras = ["pyuca"], version = "*"}
+django-money = "*"
 
 [dev-packages]
+django-debug-toolbar = "*"
+pytest = "*"
+pytest-django = "*"
+ipython = "*"
+django-extensions = "*"
 
 [requires]
 python_version = "3.13"
