@@ -35,18 +35,33 @@ INTERNAL_IPS = [
 ]
 # Application definition
 
-INSTALLED_APPS = [
+DEFAULT_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
+
+THIRD_PARTY_APPS = [
     'debug_toolbar',
     'rest_framework',
+    'django_extensions',
+    'django_filters',
     'drf_yasg',
-    'dealerships.apps.DealershipsConfig',
+    'django_countries',
+    'djmoney',
 ]
+
+SELF_APPS = [
+    "apps.dealerships",
+    "apps.cars",
+    "apps.suppliers",
+    "apps.customers",
+]
+
+INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + SELF_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -64,7 +79,7 @@ ROOT_URLCONF = 'auto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': []
         ,
         'APP_DIRS': True,
         'OPTIONS': {
