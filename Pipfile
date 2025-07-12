@@ -16,6 +16,9 @@ django-environ = "*"
 django-countries = {extras = ["pyuca"], version = "*"}
 django-money = "*"
 pillow = "*"
+djangorestframework-simplejwt = {extras = ["crypto"], version = "*"}
+drf-extensions = "*"
+six = "*"
 
 [dev-packages]
 django-debug-toolbar = "*"

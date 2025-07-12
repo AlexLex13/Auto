@@ -56,5 +56,11 @@ class Car(TimestampedModel):
 
     class Meta:
         constraints = [
-            models.CheckConstraint(condition=models.Q(release_year__gte=1850), name="release_year_gte_1850"),
+            models.CheckConstraint(
+                condition=models.Q(release_year__gte=1850),
+                name="release_year_gte_1850"
+            ),
         ]
+
+    def __str__(self):
+        return f"{self.id}_{self.model}_{self.brand}"
